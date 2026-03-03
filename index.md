@@ -62,6 +62,11 @@ permalink: /
   <p class="sub">Anonymous Submission</p>
 </div>
 
+<style>
+  .figure { text-align: center; }
+  .figure img { max-width: 100%; height: auto; display: inline-block; }
+</style>
+
 <div>
   <div class="section-title">Proposed Method</div>
   <div class="figure">
@@ -98,8 +103,8 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
       <th>Source</th>
       <th>Target</th>
       <th>Baseline</th>
-      <th>Threshold-based</th>
-      <th>AMI-based (Proposed)</th>
+      <th>equal error-based</th>
+      <th>AMI-based</th>
     </tr>
   </thead>
   <tbody>
