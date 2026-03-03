@@ -1,0 +1,12 @@
+title: "Hierarchical Residual Vector Quantization for Phoneme-Aware Linguistic Representation Learning"
+description: "Demo Page"
+
+url: "https://speechanonymous2026.github.io"
+baseurl: "/phonemeawarervq"
+
+remote_theme: "poole/hyde"
+plugins:
+  - jekyll-remote-theme
+
+markdown: kramdown
+highlighter: rouge
