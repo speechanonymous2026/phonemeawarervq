@@ -58,7 +58,7 @@ permalink: /
 </style>
 
 <div class="hero">
-  <h1>Hierarchical Residual Vector Quantization for Phoneme-Aware Linguistic Representation Learning</h1>
+  <h1>Phoneme Intra-Variability Modeling with Two-stage Vector Quantization for Linguistic Representation Learning</h1>
   <p class="sub">Anonymous Submission</p>
 </div>
 
@@ -75,67 +75,20 @@ permalink: /
 </div>
 
 <div class="abstract">
-Disentangling speaker-independent linguistic features from self-supervised speech representations (SSL) is essential for many speech processing tasks.
-Vector quantization (VQ) with <i>k</i>-means clustering is widely used to suppress speaker-related information while preserving linguistic content in SSL features.
-However, single-stage VQ with a fixed codebook size often struggles to disentangle these factors due to phonetic variability.
-
-To address this limitation, we propose a hierarchical, phoneme-aware two-stage residual vector quantization framework.
-The first stage performs phoneme-level structural clustering using a compact codebook aligned with the phoneme inventory.
-The second stage captures fine-grained intra-phoneme variations using codeword-dependent codebook sizes, determined by phoneme-specific variability via heuristic and mutual information-based criteria.
-
-Experiments on automatic speech recognition, speaker identification, and voice conversion demonstrate improved linguistic preservation while effectively reducing speaker-related information.
+Disentangling speaker-independent linguistic features from speech representations is essential for many tasks. 
+Vector quantization (VQ) with <i>k</i>-means clustering is widely used to suppress speaker information while preserving linguistic content in these features. 
+However, single-stage VQ often struggles to disentangle these factors due to phonetic variability. 
+To address this, we propose a hierarchical, phoneme-aware two-stage residual VQ framework. 
+The first stage performs phoneme-level structural clustering using a compact codebook aligned with the phoneme inventory. 
+Then, the second stage captures fine-grained intra-phoneme variations using codeword-dependent codebook sizes, determined by phoneme-specific variability using a heuristic and mutual information-based criteria. 
+Experiments on automatic speech recognition, speaker identification, and voice conversion demonstrate that our method better preserves linguistic information while reducing speaker information in representations.
 </div>
 
 <div class="section-title">Voice Conversion Samples</div>
 <p class="note">
 Audio samples including source speech, target speech, and converted outputs from three VC models. 
-We compare the single-stage VQ baseline with the proposed equal error-based and AMI-based hierarchical RVQ strategies.
+We compare the single-stage VQ baseline with the proposed equal error-based and AMI-based strategies.
 </p>
-
----
-
-## AdaptVC
-
-<table class="audio-samples">
-  <thead>
-    <tr>
-      <th>Sample</th>
-      <th>Source</th>
-      <th>Target</th>
-      <th>Baseline</th>
-      <th>equal error-based</th>
-      <th>AMI-based</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="label">#1</td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/1995_1836_000045_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/237_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0051_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/error/0051_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/ami/0051_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
-    </tr>
-
-    <tr>
-      <td class="label">#2</td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/1995_1837_000013_000002.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0159_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/error/0159_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/ami/0159_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
-    </tr>
-
-    <tr>
-      <td class="label">#3</td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/8463_287645_000014_000001.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0161_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/error/0161_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/ami/0161_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
-    </tr>
-  </tbody>
-</table>
 
 ---
 
@@ -148,7 +101,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
       <th>Source</th>
       <th>Target</th>
       <th>Baseline</th>
-      <th>Threshold-based</th>
+      <th>Equal Error-based (Proposed)</th>
       <th>AMI-based (Proposed)</th>
     </tr>
   </thead>
@@ -184,6 +137,51 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
 ---
 
+## AdaptVC
+
+<table class="audio-samples">
+  <thead>
+    <tr>
+      <th>Sample</th>
+      <th>Source</th>
+      <th>Target</th>
+      <th>Baseline</th>
+      <th>Equal Error-based (Proposed)</th>
+      <th>AMI-based (Proposed)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="label">#1</td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/1995_1836_000045_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/237_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0051_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/error/0051_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/ami/0051_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td class="label">#2</td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/1995_1837_000013_000002.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0161_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/error/0161_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/ami/0161_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
+    </tr>
+
+    <tr>
+      <td class="label">#3</td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/8463_287645_000014_000001.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0159_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/error/0159_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/ami/0159_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
 ## StyleBookVC
 
 <table class="audio-samples">
@@ -193,7 +191,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
       <th>Source</th>
       <th>Target</th>
       <th>Baseline</th>
-      <th>Threshold-based</th>
+      <th>Equal Error-based (Proposed)</th>
       <th>AMI-based (Proposed)</th>
     </tr>
   </thead>
@@ -202,27 +200,27 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
       <td class="label">#1</td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/237_126133_000014_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/3570_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/237_126133_000014_000000_3570_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/error/237_126133_000014_000000_3570_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/ami/237_126133_000014_000000_3570_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/237_126133_000014_000000_3570_10.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/error/237_126133_000014_000000_3570_10.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/ami/237_126133_000014_000000_3570_10.wav' | relative_url }}" type="audio/wav"></audio></td>
     </tr>
 
     <tr>
       <td class="label">#2</td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/1089_134686_000009_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/1089_134686_000010_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/1089_134686_000010_000000_1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/error/1089_134686_000010_000000_1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/ami/1089_134686_000010_000000_1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/1089_134686_000010_000000_1320_10.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/error/1089_134686_000010_000000_1320_10.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/ami/1089_134686_000010_000000_1320_10.wav' | relative_url }}" type="audio/wav"></audio></td>
     </tr>
 
     <tr>
       <td class="label">#3</td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/7176_92135_000035_000001.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/7176_92135_000035_000001_8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/error/7176_92135_000035_000001_8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/ami/7176_92135_000035_000001_8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/7176_92135_000035_000001_8455_10.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/error/7176_92135_000035_000001_8455_10.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/ami/7176_92135_000035_000001_8455_10.wav' | relative_url }}" type="audio/wav"></audio></td>
     </tr>
   </tbody>
 </table>
