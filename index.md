@@ -207,7 +207,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#2</td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/1089_134686_000010_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/1089_134686_000009_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/1089_134686_000010_000000_1320_10.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/error/1089_134686_000010_000000_1320_10.wav' | relative_url }}" type="audio/wav"></audio></td>
