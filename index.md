@@ -51,6 +51,16 @@ permalink: /
     background: #fcfcfc;
     white-space: nowrap;
   }
+  .audio-samples td.text {
+  text-align: left;
+  min-width: 260px;
+  line-height: 1.4;
+}
+  .audio-samples td.text .txt{
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+  }
 
   audio { width: 190px; max-width: 100%; }
   @media (max-width: 900px) { audio { width: 165px; } }
@@ -58,7 +68,7 @@ permalink: /
 </style>
 
 <div class="hero">
-  <h1>Phoneme Intra-Variability Modeling with Two-stage Vector Quantization for Linguistic Representation Learning</h1>
+  <h1>Hierarchical Vector Quantization for Intra-Phoneme Variability in Linguistic Representations</h1>
   <p class="sub">Anonymous Submission</p>
 </div>
 
@@ -74,9 +84,9 @@ permalink: /
   </div>
 </div>
 
-<div class="abstract">
+<div class="Abstract">
 Disentangling speaker-independent linguistic features from speech representations is essential for many tasks. 
-Vector quantization (VQ) with <i>k</i>-means clustering is widely used to suppress speaker information while preserving linguistic content in these features. 
+Vector quantization (VQ) with k-means clustering is widely used to suppress speaker information while preserving linguistic content in these features. 
 However, single-stage VQ often struggles to disentangle these factors due to phonetic variability. 
 To address this, we propose a hierarchical, phoneme-aware two-stage residual VQ framework. 
 The first stage performs phoneme-level structural clustering using a compact codebook aligned with the phoneme inventory. 
@@ -98,6 +108,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
   <thead>
     <tr>
       <th>Sample</th>
+      <th>Text</th>
       <th>Source</th>
       <th>Target</th>
       <th>Baseline</th>
@@ -108,6 +119,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
   <tbody>
     <tr>
       <td class="label">#1</td>
+      <td class="text"><div class="Thy ways greatly try me ruth and all thy relations">
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/source/4970_29095_000012_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/target/8463_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/base/0088_F4970-to-F8463.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -117,6 +129,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#2</td>
+      <td class="text"><div class="Then her new england conscience stepped in">
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/source/1995_1826_000021_000001.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/target/7127_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/base/0157_F1995-to-M7127.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -126,6 +139,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#3</td>
+      <td class="text"><div class="And if i had a fortune would thee want me to lead a useless life">
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/source/4970_29095_000049_000003.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/target/7176_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/base/0178_F4970-to-M7176.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -143,6 +157,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
   <thead>
     <tr>
       <th>Sample</th>
+      <th>Text</th>
       <th>Source</th>
       <th>Target</th>
       <th>Baseline</th>
@@ -153,6 +168,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
   <tbody>
     <tr>
       <td class="label">#1</td>
+      <td class="text"><div class="Very soon after dinner charles smith excused himself">
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/1995_1836_000045_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/237_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0051_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -162,6 +178,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#2</td>
+      <td class="text"><div class="What a field of cotton what a marvellous field">
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/1995_1837_000013_000002.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0161_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -171,6 +188,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#3</td>
+      <td class="text"><div class="These johnsons thought that they were first rate to their servants">
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/8463_287645_000014_000001.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0159_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -182,12 +200,13 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
 ---
 
-## StyleBookVC
+## StylebookVC
 
 <table class="audio-samples">
   <thead>
     <tr>
       <th>Sample</th>
+      <th>Text</th>
       <th>Source</th>
       <th>Target</th>
       <th>Baseline</th>
@@ -198,6 +217,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
   <tbody>
     <tr>
       <td class="label">#1</td>
+      <td class="text"><div class="But just here mr king thought it about time to take matters into his hands">
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/237_126133_000014_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/3570_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/237_126133_000014_000000_3570_10.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -207,6 +227,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#2</td>
+      <td class="text"><div class="A cold lucid indifference reigned in his soul">
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/1089_134686_000009_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/1089_134686_000010_000000_1320_10.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -216,6 +237,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#3</td>
+      <td class="text"><div class="You will see this for yourself if you consider the passage as it should properly have been written">
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/7176_92135_000035_000001.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/7176_92135_000035_000001_8455_10.wav' | relative_url }}" type="audio/wav"></audio></td>
