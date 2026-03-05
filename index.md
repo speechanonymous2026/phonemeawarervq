@@ -52,7 +52,7 @@ permalink: /
     white-space: nowrap;
   }
   .audio-samples td.text {
-  text-align: left;
+  text-align: center;
   min-width: 260px;
   line-height: 1.4;
 }
@@ -129,7 +129,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#2</td>
-      <td class="text"><div class="txt">"Then her new england conscience stepped in"</div></td>
+      <td class="text"><div class="txt">Then her new england conscience stepped in</div></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/source/1995_1826_000021_000001.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/target/7127_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/base/0157_F1995-to-M7127.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -139,7 +139,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#3</td>
-      <td class="text"><div class="txt">"And if i had a fortune would thee want me to lead a useless life"</div></td>
+      <td class="text"><div class="txt">And if i had a fortune would thee want me to lead a useless life</div></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/source/4970_29095_000049_000003.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/target/7176_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/sefvc/base/0178_F4970-to-M7176.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -168,7 +168,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
   <tbody>
     <tr>
       <td class="label">#1</td>
-      <td class="text"><div class="txt">"Very soon after dinner charles smith excused himself"</div></td>
+      <td class="text"><div class="txt">Very soon after dinner charles smith excused himself</div></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/1995_1836_000045_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/237_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0051_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -178,7 +178,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#2</td>
-      <td class="text"><div class="txt">"What a field of cotton what a marvellous field"</div></td>
+      <td class="text"><div class="txt">What a field of cotton what a marvellous field</div></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/1995_1837_000013_000002.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0161_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -188,7 +188,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#3</td>
-      <td class="text"><div class="txt">"These johnsons thought that they were first rate to their servants"</div></td>
+      <td class="text"><div class="txt">These johnsons thought that they were first rate to their servants</div></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/source/8463_287645_000014_000001.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/target/8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/adaptvc/base/0159_pred.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -217,7 +217,7 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
   <tbody>
     <tr>
       <td class="label">#1</td>
-      <td class="text"><div class="txt">"But just here mr king thought it about time to take matters into his hands"</div></td>
+      <td class="text"><div class="txt">But just here mr king thought it about time to take matters into his hands</div></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/237_126133_000014_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/3570_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/237_126133_000014_000000_3570_10.wav' | relative_url }}" type="audio/wav"></audio></td>
@@ -227,17 +227,17 @@ We compare the single-stage VQ baseline with the proposed equal error-based and 
 
     <tr>
       <td class="label">#2</td>
-      <td class="text"><div class="txt">"A cold lucid indifference reigned in his soul"</div></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/1089_134686_000009_000000.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/1320_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/1089_134686_000010_000000_1320_10.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/error/1089_134686_000010_000000_1320_10.wav' | relative_url }}" type="audio/wav"></audio></td>
-      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/ami/1089_134686_000010_000000_1320_10.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td class="text"><div class="txt">This was what did the mischief so far as the running away was concerned</div></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/8463_287645_000005_000003.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/1089_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/8463_287645_000005_000003_1089_10.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/error/8463_287645_000005_000003_1089_10.wav' | relative_url }}" type="audio/wav"></audio></td>
+      <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/ami/8463_287645_000005_000003_1089_10.wav' | relative_url }}" type="audio/wav"></audio></td>
     </tr>
 
     <tr>
       <td class="label">#3</td>
-      <td class="text"><div class="txt">"You will see this for yourself if you consider the passage as it should properly have been written"</div></td>
+      <td class="text"><div class="txt">You will see this for yourself if you consider the passage as it should properly have been written</div></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/source/7176_92135_000035_000001.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/target/8455_10.0sec_0.wav' | relative_url }}" type="audio/wav"></audio></td>
       <td><audio controls preload="none"><source src="{{ '/assets/audio/stylebookvc/base/7176_92135_000035_000001_8455_10.wav' | relative_url }}" type="audio/wav"></audio></td>
