@@ -69,7 +69,6 @@ permalink: /
 
 <div class="hero">
   <h1>Hierarchical Vector Quantization for Intra-Phoneme Variability in Linguistic Representations</h1>
-  <p class="sub">Anonymous Submission</p>
 </div>
 
 <style>
